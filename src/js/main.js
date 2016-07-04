@@ -4,18 +4,17 @@ var my_client_id = "c400709533215b0950e17f70dc8d0fc6";
 var baseURL = "https://api.soundcloud.com";
 var pullTracks = function(){
   $.ajax({
-    url: baseURL + '/tracks',
+    url: `${baseURL}/tracks/`,
     data: {
       client_id: my_client_id
-
     },
   }).then(function(response){
     response.map(musicResults);
     console.log(response);
     playMusic();
+    searchGenre();
   })
 };
-
 pullTracks();
 
 var musicResults = function(info){
@@ -33,8 +32,19 @@ var musicResults = function(info){
 
 var playMusic = function(){
   $('.track-box').on('click', function(event) {
-    var newHTML = `<source src=${event.currentTarget.dataset.stream}?client_id=${my_client_id}>`;
-    console.log(newHTML);
-    $(".music-widget").html(newHTML);
+    var widget = $(".music-widget");
+    widget.attr("src", `${event.currentTarget.dataset.stream}?client_id=${my_client_id}`);
   })
 }
+
+$('.search-button').on('click', function(event){
+  event.preventDefault();
+  url: `${baseURL}/?=${name}&client_id=${my_client_id}`;
+  window.scrollTo(0,520);
+})
+
+
+$('.musicSection').on('click', function(event){
+  event.preventDefault();
+  window.scrollTo(0,520);
+})
