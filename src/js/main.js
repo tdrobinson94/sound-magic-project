@@ -2,11 +2,15 @@ import $ from 'jquery';
 
 var my_client_id = "c400709533215b0950e17f70dc8d0fc6";
 var baseURL = "https://api.soundcloud.com";
-var pullTracks = function(){
+
+
+var pullTracks = function(query){
   $.ajax({
     url: `${baseURL}/tracks/?=q${name}`,
     data: {
-      client_id: my_client_id
+      client_id: my_client_id,
+      q: query,
+      limit: 200
     },
   }).then(function(response){
     response.map(musicResults);
@@ -50,4 +54,10 @@ $(".musicSection").click(function(event) {
     $('html, body').animate({
         scrollTop: $(".main-content").offset().top
     }, 1500);
+});
+
+$('.search-button').on('click', function(){
+  $('.main-content').html("")
+var query =  $('.search-input').val();
+pullTracks(query);
 });
