@@ -55,4 +55,4 @@ All tasks are listed below, but ideally you will just need to run `gulp start` a
 - `npm run lint`: This will run ESLint on your `/src/js` folder
 
 ## Link
-- tiy-tdrobinson94-sound-magic-project.surge.sh 
+- http://tiy-tdrobinson94-sound-magic-project.surge.sh/ 
