@@ -43,6 +43,9 @@ var playMusic = function(){
 
 $(".search-button").click(function(event) {
   event.preventDefault();
+    $('.main-content').html("")
+  var query =  $('.search-input').val();
+  pullTracks(query);
     $('html, body').animate({
         scrollTop: $(".main-content").offset().top
     }, 1500);
@@ -54,10 +57,4 @@ $(".musicSection").click(function(event) {
     $('html, body').animate({
         scrollTop: $(".main-content").offset().top
     }, 1500);
-});
-
-$('.search-button').on('click', function(){
-  $('.main-content').html("")
-var query =  $('.search-input').val();
-pullTracks(query);
 });
