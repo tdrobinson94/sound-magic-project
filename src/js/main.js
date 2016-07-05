@@ -4,7 +4,7 @@ var my_client_id = "c400709533215b0950e17f70dc8d0fc6";
 var baseURL = "https://api.soundcloud.com";
 var pullTracks = function(){
   $.ajax({
-    url: `${baseURL}/tracks`,
+    url: `${baseURL}/tracks/?=q${name}`,
     data: {
       client_id: my_client_id
     },
