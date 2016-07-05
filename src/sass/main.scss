@@ -73,7 +73,7 @@
   .track-box{
     text-align: center;
     width: 250px;
-    height: 260px;
+    height: 270px;
     padding: 5px;
     border: 1px solid lightgray;
     border-radius: 10px;
@@ -99,6 +99,8 @@
       }
       .trackArtist{
         display: inline-block;
+        overflow: hidden;
+        max-height: 30px;
         font-size: 12px;
         opacity: .5;
       }
