@@ -31,7 +31,7 @@ Finally, I would strongly encourage you to install the `newapp` script from [her
 3. Remove `git` from it `$ rm -rf .git`
 4. Initialize Git `$ git init`
 5. Install the dependencies `$ npm install`
-6. Build 
+6. Build
 
 
 # Features
@@ -53,3 +53,6 @@ All tasks are listed below, but ideally you will just need to run `gulp start` a
 - `npm run test`: This will launch Mocha in your terminal and run any tests
 - `npm run deploy`: This will deploy your application to Surge.sh for you
 - `npm run lint`: This will run ESLint on your `/src/js` folder
+
+## Link
+- tiy-tdrobinson94-sound-magic-project.surge.sh 
