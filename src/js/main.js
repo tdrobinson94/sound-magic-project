@@ -5,7 +5,7 @@ var baseURL = "https://api.soundcloud.com";
 
 
 var pullTracks = function(query){
-  $.ajax({
+  return $.ajax({
     url: `${baseURL}/tracks/?=q${name}`,
     data: {
       client_id: my_client_id,
@@ -45,10 +45,12 @@ $(".search-button").click(function(event) {
   event.preventDefault();
     $('.main-content').html("")
   var query =  $('.search-input').val();
-  pullTracks(query);
+  pullTracks(query).then(function (data) {
+    console.log(data);
     $('html, body').animate({
         scrollTop: $(".main-content").offset().top
     }, 1500);
+  })
 });
 
 
