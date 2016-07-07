@@ -48,7 +48,7 @@ $(".search-button").click(function(event) {
   pullTracks(query).then(function (data) {
     console.log(data);
     $('html, body').animate({
-        scrollTop: $(".main-content").offset().top
+        scrollTop: 540
     }, 1500);
   })
 });
@@ -57,6 +57,13 @@ $(".search-button").click(function(event) {
 $(".musicSection").click(function(event) {
   event.preventDefault();
     $('html, body').animate({
-        scrollTop: $(".main-content").offset().top
+        scrollTop: 540
+    }, 1500);
+});
+
+$(".title").click(function(event) {
+  event.preventDefault();
+    $('html, body').animate({
+        scrollTop: 0
     }, 1500);
 });
